@@ -6,9 +6,9 @@ const title = ref('My Projects')
 useHead({ titleTemplate: '%s | Eneotu', title: title })
 
 let links = [
+    {url:'https://eneotu.netlify.app', title: 'Portfolio', text: 'Built with nuxt, strapi and deployed on netlify'},
     {url:'https://netflix-pro.netlify.app', title: 'Netflix Frontend Clone', text: 'Built With ReactJS and deployed on netlify'},
-    {url:'https://instagram-pro.netlify.app', title: 'Instagram Frontend Clone', text: 'Built With ReactJS and netlify'},
-    {url:'https://eneotu.netlify.app', title: 'My Portfolio', text: 'Built with nuxt and netlify'},
+    {url:'https://instagram-pro.netlify.app', title: 'Instagram Frontend Clone', text: 'Built With ReactJS and deployed on netlify'},
     {url:'https://preptask.netlify.app/quiz', title: 'Preptask', text: 'An educational tool built with nuxt, Django, GraphQL, heroku and netlify'},
 ]
    

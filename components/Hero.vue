@@ -8,7 +8,7 @@
       </v-col>
 
       <v-col cols="12" md="6" class="text-center text-md-left">
-        <h1 class="text-h6 text-md-h3 text-surface font-weight-black">
+        <h1 class="text-h6 text-md-h4 text-surface font-weight-black">
           Artificial Intelligence Researcher
         </h1>
         <v-icon icon="mdi-ampersand"></v-icon>
