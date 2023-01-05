@@ -43,8 +43,7 @@ if (!articles) {
             <template v-slot:default="{ isHovering, props }">
               <v-card
                 v-bind="props"
-                :color="isHovering ? 'bg-grey-lighten-3': 'secondary'"
-                :class="isHovering ? 'text-secondary-darken-1': 'bg-grey-lighten-4'"
+                :color="isHovering ? 'bg-grey-lighten-3': 'grey-lighten-4'"
                 elevation="20"
               >
                 <v-img
