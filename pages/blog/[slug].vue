@@ -68,13 +68,22 @@ if (!response) {
         />
       </v-col>
 
-      <v-col cols="12" md="10" class="text-justify pt-5">
+      <v-col cols="12" md="10" class="pt-5">
         <div
           v-if="article.attributes.content"
           v-html="content"
+          class="ul-style-inside"
         ></div>
       </v-col>
     </v-row>
   </v-layout>
 </template>
   
+<style scoped>
+.ul-style-inside {
+  list-style-position: inside;
+}
+div:h2 {
+  margin-top: 44rem;
+}
+</style>

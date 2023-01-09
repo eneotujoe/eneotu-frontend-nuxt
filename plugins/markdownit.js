@@ -12,11 +12,11 @@ import container from 'markdown-it-container';
 
 const markdownit = new mdit({
     html:         true,
-    xhtmlOut:     true,
-    breaks:       true,
+    xhtmlOut:     false,
+    breaks:       false,
     langPrefix:   'language-',
-    linkify:      true,
-    typographer:  true,
+    linkify:      false,
+    typographer:  false,
     quotes: '“”‘’',
   })
   .use(sub)
