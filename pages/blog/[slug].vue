@@ -42,19 +42,20 @@ if (!response) {
           {{ article.attributes.title }}
         </h1>
 
-        <p
+        <i
           v-if="article.attributes.publishedAt"
           class="text-grey-darken-2"
         >
           {{ $dayjs(article.attributes.publishedAt).format('DD MMMM YYYY') }}
-        </p>
+        </i>
+        <br>
 
-        <p
+        <i
           v-if="stats.text"
           class="text-grey-darken-2"
         >
           {{ stats.text }}
-        </p>
+        </i>
       </v-col>
 
       <v-col cols="12" md="6">
@@ -71,12 +72,12 @@ if (!response) {
           class="ul-style-inside"
         ></div>
         <br>
-        <h6
+        <h5
           v-if="article.attributes.author.data.attributes.name"
-          class="text-secondary font-weight-italic"
+          class="text-grey-darken-2"
         >
           Author: {{ article.attributes.author.data.attributes.name }}
-        </h6>
+        </h5>
       </v-col>
     </v-row>
   </v-layout>
