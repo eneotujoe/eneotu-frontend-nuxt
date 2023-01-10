@@ -83,7 +83,4 @@ if (!response) {
 .ul-style-inside {
   list-style-position: inside;
 }
-div:h2 {
-  margin-top: 44rem;
-}
 </style>
