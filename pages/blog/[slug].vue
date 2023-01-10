@@ -18,6 +18,7 @@ const seo = reactive({
   metaTitle: article.attributes.title,
   metaDescription: article.attributes.description,
   shareImage: article.attributes.image,
+  author: article.attributes.author.data.attributes.name ,
 })
 
 useHead({
@@ -41,23 +42,18 @@ if (!response) {
           {{ article.attributes.title }}
         </h1>
 
-        <i
+        <p
           v-if="article.attributes.publishedAt"
-          class="mr-10"
+          class="text-grey-darken-2"
         >
           {{ $dayjs(article.attributes.publishedAt).format('DD MMMM YYYY') }}
-        </i>
+        </p>
 
-        <i
+        <p
           v-if="stats.text"
+          class="text-grey-darken-2"
         >
           {{ stats.text }}
-        </i>
-        <p
-          v-if="article.attributes.author.data.attributes.name"
-          class="text-secondary"
-        >
-          {{ article.attributes.author.data.attributes.name }}
         </p>
       </v-col>
 
@@ -74,6 +70,13 @@ if (!response) {
           v-html="content"
           class="ul-style-inside"
         ></div>
+        <br>
+        <h6
+          v-if="article.attributes.author.data.attributes.name"
+          class="text-secondary font-weight-italic"
+        >
+          Author: {{ article.attributes.author.data.attributes.name }}
+        </h6>
       </v-col>
     </v-row>
   </v-layout>

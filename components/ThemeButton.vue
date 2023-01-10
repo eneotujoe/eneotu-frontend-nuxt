@@ -20,7 +20,7 @@ const toggleIcon = computed(() => ({
         class="text-primary"
     >
         <v-icon>
-            {{ toggleIcon.light ? 'mdi-white-balance-sunny' : 'mdi-moon-waxing-crescent' }}
+            {{ toggleIcon.light ? '$sun' : '$moon' }}
         </v-icon>
     </v-btn>
 </template>

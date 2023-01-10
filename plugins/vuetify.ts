@@ -1,19 +1,40 @@
 import { createVuetify, ThemeDefinition } from 'vuetify'
-import { md1 } from 'vuetify/blueprints'
 import 'vuetify/styles'
-import '@mdi/font/css/materialdesignicons.css'
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
+
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+import {
+  mdiGithub,
+  mdiFacebook,
+  mdiTwitter,
+  mdiLinkedin,
+  mdiInstagram,
+  mdiMoonWaxingCrescent,
+  mdiWhiteBalanceSunny,
+  mdiAmpersand,
+  mdiChevronDoubleRight,
+} from '@mdi/js'
 
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
-    ssr: true,
     icons: {
       defaultSet: 'mdi',
-      aliases,
+      aliases: {
+        ...aliases,
+        github: mdiGithub,
+        facebook: mdiFacebook,
+        twitter: mdiTwitter,
+        linkedin: mdiLinkedin,
+        instagram: mdiInstagram,
+        moon: mdiMoonWaxingCrescent,
+        sun: mdiWhiteBalanceSunny,
+        ampersand: mdiAmpersand,
+        chevronDoubleRight: mdiChevronDoubleRight,
+      },
       sets: {
         mdi,
-      }
+      },
     },
+    ssr: true,
     theme: {
       defaultTheme: 'light',
       themes: {

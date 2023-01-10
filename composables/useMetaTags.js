@@ -22,6 +22,10 @@ export function getMetaTags(seo) {
         content: seo.metaDescription,
       },
       {
+        name: "author",
+        content: seo.author,
+      },
+      {
         property: "og:description",
         content: seo.metaDescription,
       },

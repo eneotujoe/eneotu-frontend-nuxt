@@ -3,7 +3,6 @@ import vuetify from 'vite-plugin-vuetify'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: false,
-
   app: {
     head: {
       charset: 'utf-16',
@@ -11,6 +10,8 @@ export default defineNuxtConfig({
       title: 'Eneotu',
       meta: [
         { name: 'description', content: 'Artificial intelligence and software engineering blog' },
+        { name: 'keywords', content: 'Artificial intelligence, machine learning, reinforcement learning, data science' },
+        { name: 'author', content: 'Eneotu Joe' },
         { name: "twitter:card", content: "summary_large_image" },
         { hid: 'twitter:title', name: "twitter:title", content: 'Eneotu', },
         { hid: 'description', name: "description", content: 'Artificial intelligence and software engineering blog', },

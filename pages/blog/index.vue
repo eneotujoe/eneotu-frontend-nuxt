@@ -59,7 +59,7 @@ if (!articles) {
     
                 <v-card-actions>
                   <v-btn
-                    append-icon="mdi-chevron-double-right"
+                    append-icon="$chevronDoubleRight"
                     variant="outlined"
                     class="text-primary-darken-1 text-capitalize font-italic ma-3"
                   >

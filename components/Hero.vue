@@ -11,7 +11,7 @@
         <h1 class="text-h6 text-md-h4 text-surface font-weight-black">
           Artificial Intelligence Researcher
         </h1>
-        <v-icon icon="mdi-ampersand"></v-icon>
+        <v-icon icon="$ampersand"></v-icon>
         <h1 class="text-h6 text-md-h4 text-primary font-weight-thin mb-5">
           Software Engineer
         </h1>

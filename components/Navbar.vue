@@ -62,7 +62,7 @@ function toggleDrawar(){
             variant="outlined"
             class="hidden-sm-and-down text-primary mr-3"
             target="_blank"
-            prepend-icon="mdi-github"
+            prepend-icon="$github"
         >
             GitHub
         </v-btn>
@@ -78,7 +78,7 @@ function toggleDrawar(){
         v-model="drawer"
         location="right"
         color="secondary"
-        class="px-1"
+        class="px-2"
     >
         <v-list >
             <v-list-item
@@ -101,7 +101,7 @@ function toggleDrawar(){
             variant="outlined"
             class="text-primary mt-3"
             target="_blank"
-            prepend-icon="mdi-github"
+            prepend-icon="$github"
         >
             GitHub
         </v-btn>
