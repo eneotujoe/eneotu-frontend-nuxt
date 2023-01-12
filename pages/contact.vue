@@ -2,6 +2,7 @@
 import { useForm, useField } from 'vee-validate'
 import * as yup from 'yup'
 
+const title = ref('Contact Me')
 
 const router = useRouter()
 const { create } = useStrapi4()
@@ -56,11 +57,6 @@ const { value: email, errorMessage: emailError } = useField('email')
 const { value: phone, errorMessage: phoneError } = useField('phone')
 const { value: country, errorMessage: countryError } = useField('country')
 const { value: message, errorMessage: messageError } = useField('message')
-
-useHead({
-    titleTemplate: '%s | Eneotu',
-    title: title,
-})
 
 </script> -->
 
@@ -117,6 +113,7 @@ useHead({
             </form>
             <p v-else>Sorry but you have attempted to submit too many times</p>
         </div>
+        <MetaTags :title="title" :description="description"/>
 
     </div> -->
 </template>

@@ -1,7 +1,6 @@
 <script setup>
 import readingTime from 'reading-time/lib/reading-time'
 import useMedia from '~~/composables/useMedia'
-import { getMetaTags } from "../../composables/useMetaTags"
 
 const { $dayjs } = useNuxtApp()
 const route = useRoute()
@@ -13,23 +12,25 @@ const stats = readingTime(article.attributes.content)
 
 const content = ref('')
 content.value = useNuxtApp().$mdit.render(article.attributes.content) || article.attributes.content
-// console.log(response)
 const seo = reactive({
   metaTitle: article.attributes.title,
   metaDescription: article.attributes.description,
   shareImage: article.attributes.image,
   author: article.attributes.author.data.attributes.name ,
 })
+// console.log(seo)
+// useHead({
+//     titleTemplate: (titleChunk) => {return titleChunk ? `${seo.metaTitle} | ${titleChunk}` : 'Eneotu'},
+//     meta: getMetaTags(seo),
+//   })
 
-useHead({
-  titleTemplate: '%s | Eneotu',
-  title: seo.metaTitle,
-  meta: getMetaTags(seo),
-})
+const title =ref('Blog')
+const description =ref('Blog post on artificial intelligence and software engineering')
 
 if (!response) {
   throw createError({ statusCode: 404, statusMessage: 'error', message: 'error', fatal: true })
 }
+
 </script>
 
 <template>
@@ -81,6 +82,12 @@ if (!response) {
       </v-col>
     </v-row>
   </v-layout>
+  <MetaTags 
+    :title="article.attributes.title"
+    :description="article.attributes.description"
+    :image="article.attributes.image.data.attributes.url"
+    :author="article.attributes.author.data.attributes.name"
+  />
 </template>
   
 <style scoped>

@@ -1,24 +1,20 @@
 <script setup>
-import { ref } from 'vue'
-
 const title = ref('My Projects')
-
-useHead({ titleTemplate: '%s | Eneotu', title: title })
-
 let links = [
     {url:'https://eneotu.netlify.app', title: 'Portfolio', text: 'Built with nuxt, strapi and deployed on netlify'},
     {url:'https://netflix-pro.netlify.app', title: 'Netflix Frontend Clone', text: 'Built With ReactJS and deployed on netlify'},
     {url:'https://instagram-pro.netlify.app', title: 'Instagram Frontend Clone', text: 'Built With ReactJS and deployed on netlify'},
     {url:'https://preptask.netlify.app/quiz', title: 'Preptask', text: 'An educational tool built with nuxt, Django, GraphQL, heroku and netlify'},
 ]
-   
+
+
 </script>
 
 <template>
     <v-container class="pt-10">
         <v-row justify="center">
             <v-col cols="12" md="10">
-                <v-card-title class="text-h4 font-weight-black text-primary py-10">{{ title }}</v-card-title>
+                <v-card-title class="text-h4 font-weight-black text-primary py-10">My Projects</v-card-title>
             </v-col>
         </v-row>
 
@@ -29,7 +25,7 @@ let links = [
                 cols="12"
                 md="5"
             >
-                <v-card color="primary" height="155">
+                <v-card color="primary" height="220">
                     <v-card-text class="text-secondary"> 
                         <nuxt-link
                             class="text-decoration-none text-secondary"
@@ -43,7 +39,7 @@ let links = [
                     <v-card-actions>
                         <v-btn
                             :href="link.url"
-                            append-icon="mdi-open-in-new"
+                            append-icon="$openInNew"
                             class="bg-secondary text-primary"
                         >
                             View
@@ -53,4 +49,5 @@ let links = [
             </v-col>
         </v-row>
     </v-container>
+    <MetaTags :title="title"/>
 </template>

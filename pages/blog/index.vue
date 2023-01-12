@@ -2,15 +2,6 @@
 import qs from 'qs'
 import useMedia from '~~/composables/useMedia'
 
-const title = ref('Blog')
-const description = ref('Blog post on artificial intelligence and software engineering')
-
-useHead({
-  titleTemplate: '%s | Eneotu',
-  title: title,
-  meta: [{ name: 'description', content: description }],
-})
-
 const { find } = useStrapi()
 const query = qs.stringify({
   populate: '*', 
@@ -23,6 +14,9 @@ let articles = await find(`articles?${query}`)
 if (!articles) {
   throw createError({ statusCode: 404, statusMessage: 'error', message: 'error', fatal: true })
 }
+
+const title =ref('Blog')
+const description =ref('Blog post on artificial intelligence and software engineering')
 
 </script>
 
@@ -73,6 +67,7 @@ if (!articles) {
       </v-col>
     </v-row>
   </v-layout>
+  <MetaTags :title="title" :description="description"/>
 </template>
 
 <style scoped>

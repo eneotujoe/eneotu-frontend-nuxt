@@ -12,6 +12,7 @@ import {
   mdiWhiteBalanceSunny,
   mdiAmpersand,
   mdiChevronDoubleRight,
+  mdiOpenInNew,
 } from '@mdi/js'
 
 export default defineNuxtPlugin(nuxtApp => {
@@ -29,6 +30,7 @@ export default defineNuxtPlugin(nuxtApp => {
         sun: mdiWhiteBalanceSunny,
         ampersand: mdiAmpersand,
         chevronDoubleRight: mdiChevronDoubleRight,
+        openInNew: mdiOpenInNew,
       },
       sets: {
         mdi,
