@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   },
   
   modules: [
+    '@nuxt/content',
     async (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(vuetify()))
     },
