@@ -34,7 +34,7 @@ if (!response) {
 </script>
 
 <template>
-  <v-layout class="bg-surface mx-n5 mt-n4">
+  <v-layout class="bg-surface mx-n5 mt-n4 pb-10">
     <v-row justify="center" class="ma-3 ma-md-15">
       <v-col cols="12" md="4">
         <h1 
@@ -43,20 +43,19 @@ if (!response) {
           {{ article.attributes.title }}
         </h1>
 
-        <i
+        <p
           v-if="article.attributes.publishedAt"
           class="text-grey-darken-2"
         >
           {{ $dayjs(article.attributes.publishedAt).format('DD MMMM YYYY') }}
-        </i>
-        <br>
+        </p>
 
-        <i
+        <p
           v-if="stats.text"
           class="text-grey-darken-2"
         >
           {{ stats.text }}
-        </i>
+        </p>
       </v-col>
 
       <v-col cols="12" md="6">
