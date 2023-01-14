@@ -1,5 +1,6 @@
 <script setup>
 const title = ref('My Projects')
+const description = ref('Portfolio Projects')
 let links = [
     {url:'https://eneotu.netlify.app', title: 'Portfolio', text: 'Built with nuxt, strapi and deployed on netlify'},
     {url:'https://netflix-pro.netlify.app', title: 'Netflix Frontend Clone', text: 'Built With ReactJS and deployed on netlify'},
@@ -49,5 +50,5 @@ let links = [
             </v-col>
         </v-row>
     </v-container>
-    <MetaTags :title="title"/>
+    <MetaTags :title="title" :description="description"/>
 </template>

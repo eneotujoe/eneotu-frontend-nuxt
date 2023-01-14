@@ -2,6 +2,19 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      script: [
+        {
+          async:true,
+          defer:true,
+          'data-website-id':'2c38409d-821c-4cf3-a5e8-9ee3921f4da2',
+          src:'https://analytics-admin.netlify.app/umami.js'
+        }
+      ]
+    }
+  },
+
   css: [
     'vuetify/lib/styles/main.sass',
   ],

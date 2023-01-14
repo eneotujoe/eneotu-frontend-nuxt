@@ -45,7 +45,7 @@ defineProps({
         <Link rel="canonical" href='https://eneotu.com' />
 
       
-        <Script async defer data-website-id='2c38409d-821c-4cf3-a5e8-9ee3921f4da2' src='https://analytics-admin.netlify.app/umami.js' />
+        <!-- <Script async defer data-website-id='2c38409d-821c-4cf3-a5e8-9ee3921f4da2' src='https://analytics-admin.netlify.app/umami.js' ></Script>/> -->
     
     </Head>
 </template>

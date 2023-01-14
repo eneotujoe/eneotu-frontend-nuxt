@@ -44,22 +44,20 @@ const description =ref('Blog post on artificial intelligence and software engine
                   v-if="article.attributes.image.data !== null"
                   :src="useMedia(article.attributes.image.data.attributes.url)"
                 />      
-                <v-card-title
+                <h3
                   v-if="article.attributes.title"
-                  class="font-weight-black"
+                  class="pa-2"
                 >
                   {{ article.attributes.title }}
-                </v-card-title>
+                </h3>
     
-                <v-card-actions>
-                  <v-btn
-                    append-icon="$chevronDoubleRight"
-                    variant="outlined"
-                    class="text-primary-darken-1 text-capitalize font-italic ma-3"
-                  >
-                    Read More
-                  </v-btn>
-                </v-card-actions>
+                <v-btn
+                  append-icon="$chevronDoubleRight"
+                  variant="outlined"
+                  class="text-primary-darken-1 text-capitalize font-italic ma-3"
+                >
+                  Read More
+                </v-btn>
               </v-card>
             </template>
           </v-hover>
